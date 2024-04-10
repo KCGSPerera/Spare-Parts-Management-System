@@ -1,11 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
-  <display-name>Vehicle Spare Parts Management System</display-name>
-  <welcome-file-list>
-    <welcome-file>login.jsp</welcome-file>
-  </welcome-file-list>
-  <error-page>
-    <exception-type>java.lang.Exception</exception-type>
-    <location>/Error.jsp</location>
-  </error-page>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+ version="3.1">
+ 
+ 
+ <!-- For view order -->
+ 
+<servlet>
+
+	<servlet-name>viewOrder</servlet-name>
+	<servlet-class>com.order.ViewOrderServlet</servlet-class>
+	
+</servlet>
+
+
+<servlet-mapping>
+
+	<servlet-name>viewOrder</servlet-name>
+	<url-pattern>/order</url-pattern>
+	
+</servlet-mapping>
+
+
+
+<!-- For place order -->
+
+<servlet>
+
+	<servlet-name>placeOrder</servlet-name>
+	<servlet-class>com.placeOrder.PlaceOrderServlet</servlet-class>
+	
+</servlet>
+
+<servlet-mapping>
+
+	<servlet-name>placeOrder</servlet-name>
+	<url-pattern>/place</url-pattern>
+	
+</servlet-mapping>
+
+
+
+<!-- For update order -->
+
+
+<servlet>
+
+	<servlet-name>updateOrderStatus</servlet-name>
+	<servlet-class>com.update.UpdateOrderServlet</servlet-class>
+	
+</servlet>
+
+<servlet-mapping>
+
+	<servlet-name>updateOrderStatus</servlet-name>
+	<url-pattern>/update</url-pattern>
+	
+</servlet-mapping>
+
+
+
+
 </web-app>
